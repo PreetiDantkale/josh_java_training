@@ -5,7 +5,7 @@
 // The constructor should accept all the properties of the person as
 // well as the current class i.e Student or Teacher and set the properties.
 
-class Person{
+class PersonAssi2 {
   int age;
   String name;
 
@@ -28,14 +28,14 @@ class Person{
   }
 }
 
-class Teacher extends Person{
+class Teacher extends PersonAssi2{
   String dept, specialization;
 
-  public Teacher(String d, String spc, String n, int a){
-    dept = d;
-    specialization = spc;
-    name = n;
-    age = a;
+  public Teacher(String dept, String specialization, String name, int age){
+    this.dept = dept;
+    this.specialization = specialization;
+    this.name = name;
+    this.age = age;
   }
 
   String getDept(){
@@ -76,32 +76,32 @@ class Teacher extends Person{
 
 }
 
-class Student extends Person{
+class Student extends PersonAssi2{
   int rollNo;
   String course, dept;
 
-  public Student(int r, String c, String d, String n, int a){
-    rollNo = r;
-    course = c;
-    dept = d;
-    name = n;
-    age = a;
+  public Student(int rollNo, String course, String dept, String name, int age){
+    this.rollNo = rollNo;
+    this.course = course;
+    this.dept = dept;
+    this.name = name;
+    this.age = age;
   }
 
   int getRollNo(){
     return rollNo;
   }
 
-  void setRollNo(int myRollNo){
-    rollNo = myRollNo;
+  void setRollNo(int rollNo){
+    this.rollNo = rollNo;
   }
 
   String getDept(){
     return dept;
   }
 
-  void setDept(String myDept){
-    dept = myDept;
+  void setDept(String dept){
+    this.dept = dept;
   }
 
   String getCourse(){
@@ -116,20 +116,19 @@ class Student extends Person{
     return name;
   }
 
-  void setName(String myName){
-    name = myName;
+  void setName(String name){
+    this.name = name;
   }
 
   int getAge(){
     return age;
   }
 
-  void setAge(int myAge){
-    age = myAge;
+  void setAge(int age){
+    this.age = age;
   }
 
   void printDetails(){
     System.out.println("Name: "+name+" Age: "+age+" Dept: "+dept+" Roll No: "+rollNo+" Course:"+course);
   }
-  
 }
